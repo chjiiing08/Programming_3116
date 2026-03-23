@@ -1,18 +1,14 @@
 const num = document.getElementById("result");
-// const pButton = document.getElementById("pb");
 
 let cnt = 0;
 
-// pButton.addEventListener("click",() => {
-//     cnt++;
-//     num.innerHTML = cnt;
-// });
-// pButton.onclick = () => {
-//     cnt++;
-//     num.innerHTML = cnt;
-// };
-
-function plus(){
-    cnt++;
+function plus (number = 1) {
+    cnt+= number;
     num.innerHTML = cnt;
 }
+
+//  변수형
+// const plus = (number = 1) => {
+//     cnt+= number;
+//     num.innerHTML = cnt;
+// }
