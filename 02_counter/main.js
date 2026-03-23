@@ -6,6 +6,7 @@ function plus (number = 1) {
     cnt+= number;
     num.innerHTML = cnt;
 }
+num.innerHTML = cnt;
 
 //  변수형
 // const plus = (number = 1) => {
