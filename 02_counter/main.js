@@ -1,5 +1,5 @@
-const num = document.getElementsByTagName("h1")[0];
-const pButton = document.getElementById("pb");
+const num = document.getElementById("result");
+// const pButton = document.getElementById("pb");
 
 let cnt = 0;
 
@@ -7,7 +7,12 @@ let cnt = 0;
 //     cnt++;
 //     num.innerHTML = cnt;
 // });
-pButton.onclick = () => {
+// pButton.onclick = () => {
+//     cnt++;
+//     num.innerHTML = cnt;
+// };
+
+function plus(){
     cnt++;
     num.innerHTML = cnt;
-};
+}
