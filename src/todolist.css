@@ -55,7 +55,7 @@
 .todo__button--delete{
     font-size: 0.8rem;
 }
-.todo__item--complete 밑에 .todo__label을 흐리게, 취소선히지
+/* .todo__item--complete 밑에 .todo__label을 흐리게, 취소선히지 */
 
 .todo__item--complete .todo__label {
     color: #999;
