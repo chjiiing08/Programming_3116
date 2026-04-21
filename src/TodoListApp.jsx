@@ -11,9 +11,19 @@ class Todo {
         this.isCompleted = false;   //완료 여부: 기본값 false
     }
 }
-
+const TODOS_STORAGE_KEY = "todos";
 function TodoListApp() {
-    const [todos, setTodos] = useState([]); //할일 목록: 기본값 빈 리스트 
+   const initTodos = () => {
+        const savedTodos = localStorage.getItem(TODOS_STORAGE_KEY);
+        return savedTodos ? JSON.parse(savedTodos) : [];
+    }
+
+    const [todos, setTodos] = useState(initTodos); //할일 목록: 기본값 빈 리스트
+
+    //todos가 바뀌면, LocalStroage에 저장하자
+    useEffect(() => {
+        localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
+    }, [todos]);     //[](mount할 때 한번 실행), [todos]에 있는 state가 바뀌면, 그 앞 함수정의 를 호출하자
     const addTodo = (text) => setTodos((todos) => [
         // 이전 todos 복사
         ...todos,
