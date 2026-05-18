@@ -28,3 +28,5 @@ npm create vite@latest .
 - `{!조건식 && 거짓}`
 - onKeyDown
 - LocalStorage, `useEffect()`
+- `style={{}}`
+- HomeApp: page state가 home이면 `<ButtnPageApp />`, counterapp이면 `<CounterApp />`, todoliatapp이면 `<TodoListApp />`
